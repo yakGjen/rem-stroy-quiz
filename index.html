@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Строительство</title>
+
+  <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<link href="app.css" rel="stylesheet"></head>
+
+<body>
+  <header class="header">
+    <div class="wrapper">
+      <a href="/" class="header__logo-wrap">
+        <img src="./assets/logo.png" alt="image" class="header__logo">
+      </a>
+
+      <div class="header__contacts">
+        <div class="header__messengers">
+          <a href="#" class="header__messenger-link">
+            <img src="./assets/viber.png" alt="image" class="header__messenger-img">
+          </a>
+          <a href="#" class="header__messenger-link">
+            <img src="./assets/telegram.png" alt="image" class="header__messenger-img">
+          </a>
+        </div>
+        <div class="header__phone-wrap">
+          <a href="tel:+375(29)115-96-59" class="header__phone">+375(29) 115-96-59</a>
+          <p class="header__online">Сейчас мы онлайн</p>
+        </div>
+        <button class="header__btn button">
+          <img src="./assets/phone.png" alt="image">
+          Заказать звонок
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="quiz-sec">
+      <div class="wrapper line">
+        <div class="quiz-static">
+          <div class="quiz-static__form-wrap">
+            <span class="quiz-static__line"></span>
+            <h4 class="quiz-static__header">У вас сложный объект и нестандартные решения?</h4>
+            <p class="quiz-static__text">Оставьте заявку и наш специалист поможет вам</p>
+            <form method="POST" class="quiz-static__form form">
+              <input type="text" placeholder="Ваш телефон">
+              <input type="submit" value="Оставить заявку" class="button">
+            </form>
+          </div>
+
+          <div class="quiz-static__bonus">
+            <img src="./assets/quiz-static.png" alt="image" class="quiz-static__bonus-img">
+            <p class="quiz-static__bonus-text">
+              <span>Бонус при прохождении квиза:</span>
+              индивидуальная консультация нашего специалиста
+            </p>
+          </div>
+        </div>
+        <form method="POST" name="quiz" class="quiz form">
+          <div class="quiz__question-wrap swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide quiz__question">Есть ли у вас проект?</div>
+              <div class="swiper-slide quiz__question">Какое здание собираетесь строить или реконструировать?</div>
+              <div class="swiper-slide quiz__question">Какая общая площадь здания?</div>
+              <div class="swiper-slide quiz__question">Какой материал хотели бы использовать?</div>
+              <div class="swiper-slide quiz__question">Когда нужно приступить к работе?</div>
+            </div>
+          </div>
+          <div class="quiz__progress">
+            <p class="quiz__progress-numb">
+              Вопрос <span class="current-slide">1</span> из <span class="all-slides">6</span>
+            </p>
+            <div class="quiz__progress-lines">
+              <span class="quiz__progress-line quiz__progress-line_active"></span>
+              <span class="quiz__progress-line"></span>
+              <span class="quiz__progress-line"></span>
+              <span class="quiz__progress-line"></span>
+              <span class="quiz__progress-line"></span>
+            </div>
+          </div>
+          <div class="quiz__slides-wrap swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide quiz__slide">
+                <input type="radio" id="q-1.1" name="q-1">
+                <label for="q-1.1">Есть проект</label>
+
+                <input type="radio" id="q-1.2" name="q-1">
+                <label for="q-1.2">Нет проекта</label>
+
+                <input type="radio" id="q-1.3" name="q-1">
+                <label for="q-1.3">Хочу заказать проект у вас</label>
+              </div>
+
+              <div class="swiper-slide quiz__slide">
+                <input type="radio" id="q-2.1" name="q-2">
+                <label for="q-2.1">Торговый центр, магазин</label>
+
+                <input type="radio" id="q-2.2" name="q-2">
+                <label for="q-2.2">Бизнес-центры, офисное здание</label>
+
+                <input type="radio" id="q-2.3" name="q-2">
+                <label for="q-2.3">Производственное здание</label>
+
+                <input type="radio" id="q-2.4" name="q-2">
+                <label for="q-2.4">Сельскохозяйственный комплекс</label>
+
+                <input type="radio" id="q-2.5" name="q-2">
+                <label for="q-2.5">Частный или многоквартирный дом</label>
+
+                <input type="radio" id="q-2.6" name="q-2">
+                <label for="q-2.6">Другое</label>
+              </div>
+
+              <div class="swiper-slide quiz__slide quiz__slide_center">
+                <label class="quiz__label-text">
+                  Ваша площадь
+                  <input type="text" placeholder="m2">
+                </label>
+              </div>
+
+              <div class="swiper-slide quiz__slide">
+                <input type="radio" id="q-4.1" name="q-4">
+                <label for="q-4.1">Монолитный железобетон</label>
+
+                <input type="radio" id="q-4.2" name="q-4">
+                <label for="q-4.2">Сборный железобетон</label>
+
+                <input type="radio" id="q-4.3" name="q-4">
+                <label for="q-4.3">Кирпич</label>
+
+                <input type="radio" id="q-4.4" name="q-4">
+                <label for="q-4.4">Газосиликатные или керамзитные блоки</label>
+
+                <input type="radio" id="q-4.5" name="4-2">
+                <label for="q-4.5">Дерево</label>
+
+                <input type="radio" id="q-4.6" name="q-4">
+                <label for="q-4.6">Нужна консультация специалиста</label>
+              </div>
+
+              <div class="swiper-slide quiz__slide quiz__slide_center">
+                <label class="quiz__label-text">
+                  Ваш ответ
+                  <input type="text" placeholder="Сегодня">
+                </label>
+              </div>
+
+              <div class="swiper-slide final-slide">
+                <h3 class="final-slide__header">Выберите подарок за прохождение квиза:</h3>
+                <div class="final-slide__presents">
+                  <input id="final-1" name="final" type="radio">
+                  <label for="final-1" class="final-slide__present">
+                    <div class="final-slide__present-img-wrap">
+                      <img src="./assets/bonus-1.png" alt="img" class="final-slide__present-img">
+                    </div>
+                    
+                    <p class="final-slide__present-label">Расчет стоимости вашей стройки или реконструкции</p>
+                  </label>
+        
+                  <input id="final-2" name="final" type="radio">
+                  <label for="final-2" class="final-slide__present">
+                    <div class="final-slide__present-img-wrap">
+                      <img src="./assets/bonus-2.png" alt="img" class="final-slide__present-img">
+                    </div>
+
+                    <p class="final-slide__present-label">Индивидуальная консультация</p>
+                  </label>
+        
+                  <input id="final-3" name="final" type="radio">
+                  <label for="final-3" class="final-slide__present">
+                    <div class="final-slide__present-img-wrap">
+                      <img src="./assets/bonus-3.png" alt="img" class="final-slide__present-img">
+                    </div>
+                    
+                    <p for="final-3" class="final-slide__present-label">Секретный подарок от руководителя компании</p>
+                  </label>
+                </div>
+                <div class="final-form">
+                  <h3 class="final-form__header">Получите ваш бонус за прохождение квиза!</h3>
+                  <p class="final-form__subheader">Успейте забрать свой подарок в течение 7 дней! Иначе все бонусы сгорают!</p>
+                  <div class="final-form__form-sec">
+                    <input type="tel" name="phone" placeholder="Ваш телефон">
+                    <input type="submit" value="Оставить заявку" class="button">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="quiz__btns">
+            <button type="button" class="quiz__btn quiz__btn_prev quiz__btn_hide button">Назад</button>
+            <button type="button" class="quiz__btn quiz__btn_next button">Далее</button>
+            <p class="note-next">Выберете ответ</p>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- <section class="intro">
+      <div class="wrapper line">
+        <h1 class="intro__header">Строительство и реконструкция коммерческих и частных зданий</h1>
+        <p class="intro__subheader">
+          Узнайте <span>за 1 минуту</span> стоимость вашей стройки или реконструкции
+        </p>
+        <h3 class="intro__quiz-header">Пройдите тест из 6 вопросов и получите:</h3>
+        <div class="intro__presents">
+          <div class="intro__present">
+            <div class="intro__present-img-wrap">
+              <img src="./assets/bonus-1.png" alt="img" class="intro__present-img">
+            </div>
+            <p class="intro__present-text">Расчет стоимости вашей стройки или реконструкции</p>
+          </div>
+
+          <div class="intro__present">
+            <div class="intro__present-img-wrap">
+              <img src="./assets/bonus-2.png" alt="img" class="intro__present-img">
+            </div>
+            <p class="intro__present-text">Индивидуальная консультация</p>
+          </div>
+
+          <div class="intro__present">
+            <div class="intro__present-img-wrap">
+              <img src="./assets/bonus-3.png" alt="img" class="intro__present-img">
+            </div>
+            <p class="intro__present-text">Секретный подарок от руководителя компании</p>
+          </div>
+        </div>
+        <div class="intro__btn-wrap">
+          <button class="intro__btn button">Пройдите тест и получите бонус!</button>
+          <p class="intro__btn-subtext">Тест бесплатный и ни к чему вас не обязывает + в конце вы можете выбрать подарок</p>
+        </div>
+        <div class="intro__bonuses">
+          <div class="intro__bonus">
+            <div class="intro__bonus-img-wrap">
+              <img src="./assets/i-1.png" alt="image" class="intro__bonus-img">
+            </div>
+            <p class="intro__bonus-text">
+              <span>Всегда</span><br>
+              работаем <br>
+              по договору<br>
+            </p>
+          </div>
+
+          <div class="intro__bonus">
+            <div class="intro__bonus-img-wrap">
+              <img src="./assets/i-2.png" alt="image" class="intro__bonus-img">
+            </div>
+            <p class="intro__bonus-text">
+              <span>Более</span> <br>
+              10 лет <br>
+              на рынке<br>
+            </p>
+          </div>
+
+          <div class="intro__bonus">
+            <div class="intro__bonus-img-wrap">
+              <img src="./assets/i-3.png" alt="image" class="intro__bonus-img">
+            </div>
+            <p class="intro__bonus-text">
+              <span>Только</span> <br>
+              проверенные<br>
+              материалы<br>
+            </p>
+          </div>
+
+          <div class="intro__bonus">
+            <div class="intro__bonus-img-wrap">
+              <img src="./assets/i-4.png" alt="image" class="intro__bonus-img">
+            </div>
+            <p class="intro__bonus-text">
+              <span>Гарантируем</span><br>
+              качественное <br>
+              выполнение работ<br>
+            </p>
+          </div>
+
+          <div class="intro__bonus">
+            <div class="intro__bonus-img-wrap">
+              <img src="./assets/i-5.png" alt="image" class="intro__bonus-img">
+            </div>
+            <p class="intro__bonus-text">
+              <span>Используем</span><br>
+              современные<br>
+              технологии<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bottom-sec">
+      <div class="wrapper line">
+        <h2 class="bottom-sec__header">Хотите бесплатное разрешение на строительство?</h2>
+        <div class="bottom-sec__form-wrap">
+          <h6 class="bottom-sec__form-header">Оставьте заявку и мы поможем вам сэкономить ваши деньги</h6>
+          <form method="POST" class="bottom-sec__form form">
+            <input type="text" placeholder="Ваш телефон">
+            <input type="submit" value="Оставить заявку" class="button">
+          </form>
+        </div>
+      </div>
+    </section> -->
+  </main>
+
+  <footer class="footer">
+    <div class="wrapper">
+      <a href="/" class="footer__logo-wrap">
+        <img src="./assets/logo.png" alt="image" class="footer__logo">
+      </a>
+
+      <div class="footer__content">
+        <p class="footer__text">Хотите такой же сайт? Обращайтесь в Alfa Digital!</p>
+        <div class="footer__company-wrap">
+          <p class="footer__company-text">Разработка сайта:</p>
+          <a href="https://alfa-mg.com/">
+            <img src="./assets/company.png" alt="image" class="footer__company-img">
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="pop-up-background">
+    <div class="pop-up">
+      <h4 class="pop-up__header">Обратный звонок</h4>
+      <p class="pop-up__subheader">
+        Наш <span>эксперт в области строительства и проектирования</span> свяжется с вами в ближайшее время
+      </p>
+      <form method="POST" class="pop-up__form form">
+        <input type="text" placeholder="Имя">
+        <input type="tel" placeholder="Телефон">
+        <input type="text" placeholder="Удобное время для звонка">
+        <input type="submit" value="Заказать звонок" class="button">
+      </form>
+      <p class="pop-up__up-mess">Или напишете нам, если не хотите ждать:</p>
+      <div class="pop-up__messengers messengers">
+        <a href="#" class="messenger">
+          <img src="./assets/p-viber.png" alt="image">
+        </a>
+        <a href="#" class="messenger">
+          <img src="./assets/p-whatsapp.png" alt="image">
+        </a>
+        <a href="#" class="messenger">
+          <img src="./assets/p-telegram.png" alt="image">
+        </a>
+      </div>
+    </div>
+
+    <div class="pop-up-thnx">
+      <h4 class="pop-up-thnx__header">
+        Благодарим вас за заявку! <br>
+        Наш мендежер свяжется с вами в ближайшее время
+      </h4>
+      <p class="pop-up-thnx__subheader">Если вы не хотите ждать, можете начать общение с нами в мессенджерах:</p>
+      <a href="tel:+375(29)115-96-59" class="pop-up-thnx__phone">
+        +375(29) 115-96-59
+      </a>
+      <div class="messengers">
+        <a href="#" class="messenger">
+          <img src="./assets/p-viber.png" alt="image">
+        </a>
+        <a href="#" class="messenger">
+          <img src="./assets/p-whatsapp.png" alt="image">
+        </a>
+        <a href="#" class="messenger">
+          <img src="./assets/p-telegram.png" alt="image">
+        </a>
+      </div>
+    </div>
+
+    <div class="pop-up-exit">
+      <h3 class="pop-up-exit__header">Уже уходите? Вы все еще можете получить: индивидуальную консультацию нашего специалиста и скидку 5 %</h3>
+      <form method="POST" name="pop-up-exit" class="pop-up-exit__form form">
+        <input type="text" placeholder="Ваш телефон">
+        <input type="tel" placeholder="Ваше имя">
+        <input type="submit" value="Оставить заявку" class="button">
+      </form>
+      <div class="pop-up-exit__bottom-line">
+        <p class="pop-up-exit__bottom-line-text">Если вы не хотите ждать, можете начать общение с нами в мессенджерах:</p>
+        <div class="messengers">
+          <a href="#" class="messenger">
+            <img src="./assets/p-viber.png" alt="image">
+          </a>
+          <a href="#" class="messenger">
+            <img src="./assets/p-whatsapp.png" alt="image">
+          </a>
+          <a href="#" class="messenger">
+            <img src="./assets/p-telegram.png" alt="image">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="bundle.js"></script></body>
+
+</html>
